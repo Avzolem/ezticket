@@ -227,11 +227,20 @@ export default function Hero() {
                         <div className="grid grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:grid-cols-2 lg:items-start">
                             {/* Aqui va el texto */}
                             <div className="m-auto">
-                                <h1 className="text-white-900 text-center text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                                <h1 className="text-white-900  text-center text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                                     <span className=" text-white xl:inline">
                                         Descarga la App{" "}
                                     </span>{" "}
                                 </h1>
+                                <br />
+                                {/* Enlace de descarga de la app https://ezticket.vercel.app/resources/EzTicket.apk */}
+                                <div className="relative mx-auto flex justify-center overflow-hidden ">
+                                    <img
+                                        src="/images/qr-code.png"
+                                        className=" w-[12rem]"
+                                    />
+                                </div>
+                                <br />
                                 <h1 className="text-white-900 text-center text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                                     <span className=" bg-gradient-to-r  from-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
                                         Consulta los horarios, comparte tus{" "}
