@@ -87,7 +87,7 @@ export default function Hero() {
                                 {" "}
                                 {/* Aqui va la imagen */}
                                 <img
-                                    src="https://ticketmeta.io/static/media/image-event-cards.3201de16890cf04252b3.png"
+                                    src="/images/boletines.png"
                                     className="w-[40rem]  "
                                 />
                             </div>
@@ -164,7 +164,7 @@ export default function Hero() {
                                     />
                                     <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                                         <img
-                                            src="https://ticketmeta.io/static/media/image-macbook.9e4a176a7c912489bcd7.png"
+                                            src="/images/lap.png"
                                             alt="Product screenshot"
                                             width={2432}
                                             height={1442}
