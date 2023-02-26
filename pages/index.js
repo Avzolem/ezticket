@@ -29,13 +29,13 @@ export default function Home() {
                         <div className="px-4 sm:px-8 lg:w-full ">
                             <h1 className="text-white-900 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                                 <span className=" text-white xl:inline">
-                                    Buying a{" "}
+                                    Comprar{" "}
                                 </span>{" "}
                                 <span className="  bg-gradient-to-r  from-emerald-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent xl:inline">
                                     EzTicket{" "}
                                 </span>
                                 <span className=" text-white xl:inline">
-                                    is as easy as saying{" "}
+                                    es tan facil como decir{" "}
                                 </span>{" "}
                                 <br />
                                 <span className=" bg-gradient-to-r  from-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
