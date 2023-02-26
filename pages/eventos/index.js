@@ -50,10 +50,7 @@ export default function Home() {
                         {/* Evento 2 */}
 
                         <div className="mx-4 rounded-md  bg-purple-500 shadow">
-                            <Link
-                                href="/eventos/moneditakawaiiunicorn"
-                                passHref
-                            >
+                            <Link href="/eventos/evento2" passHref>
                                 <div className="thumbitem my-4 mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">
                                         <Image
@@ -81,10 +78,7 @@ export default function Home() {
 
                         {/* Evento 3 */}
                         <div className="mx-4 rounded-md  bg-purple-500 shadow">
-                            <Link
-                                href="/eventos/moneditakawaiiunicorn"
-                                passHref
-                            >
+                            <Link href="/eventos/evento3" passHref>
                                 <div className="thumbitem my-4 mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">
                                         <Image
@@ -113,10 +107,7 @@ export default function Home() {
                         {/* Evento 4 */}
 
                         <div className="mx-4 rounded-md  bg-purple-500 shadow">
-                            <Link
-                                href="/eventos/moneditakawaiiunicorn"
-                                passHref
-                            >
+                            <Link href="/eventos/" passHref>
                                 <div className="thumbitem my-4 mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">
                                         <Image
