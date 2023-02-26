@@ -32,7 +32,7 @@ export default function Home() {
                                     Buying a{" "}
                                 </span>{" "}
                                 <span className="  bg-gradient-to-r  from-emerald-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent xl:inline">
-                                    NFTicket{" "}
+                                    EzTicket{" "}
                                 </span>
                                 <span className=" text-white xl:inline">
                                     is as easy as saying{" "}
@@ -80,6 +80,7 @@ export default function Home() {
                     </div>
                     <div className="convocatoria absolute relative mt-6 flex h-full w-full justify-center md:mt-0">
                         <a name="init"></a>
+
                         <Hero />
                     </div>
                     <div></div>
@@ -88,16 +89,16 @@ export default function Home() {
                         <div className="px-4 sm:px-8 lg:w-full ">
                             <h1 className="text-white-900 text-4xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                                 <span className="block text-white xl:inline">
-                                    Get{" "}
+                                    Obten{" "}
                                 </span>{" "}
                                 <span className="block bg-gradient-to-r  from-emerald-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent xl:inline">
                                     EzTickets{" "}
                                 </span>
                                 <span className="block text-white xl:inline">
-                                    to the events you{" "}
+                                    para los eventos que{" "}
                                 </span>{" "}
                                 <span className="block text-purple-500 xl:inline">
-                                    love.{" "}
+                                    adoras.{" "}
                                 </span>{" "}
                             </h1>
 
@@ -113,6 +114,26 @@ export default function Home() {
                                     <a name="scroll"></a>
                                 </div>
                             </div>
+
+                            {/* <br />
+                            <br />
+                            <br />
+                            <br />
+
+                            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                                <div className="mx-auto max-w-2xl sm:text-center">
+                                    <h2 className="text-base font-semibold leading-7 text-indigo-400">
+                                        Powered by
+                                    </h2>
+                                    <div className="relative mx-auto flex justify-center overflow-hidden ">
+                                        {" "}
+                                        <img
+                                            src="https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdark-horizontal.e4df684f.svg&w=256&q=75"
+                                            className=" w-[15rem]  "
+                                        />
+                                    </div>
+                                </div>
+                            </div> */}
                         </div>
                     </div>
                 </main>

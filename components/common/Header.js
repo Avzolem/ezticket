@@ -121,7 +121,7 @@ const Header = () => {
                             {publicKey ? (
                                 <Menu as="div" className="relative ml-3">
                                     <div>
-                                        <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-white  focus:ring-offset-2">
+                                        <Menu.Button className="flex rounded-full bg-purple-500 text-sm focus:outline-none focus:ring-white  focus:ring-offset-2">
                                             <span className="sr-only">
                                                 Open user menu
                                             </span>
