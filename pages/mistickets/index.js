@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { IDL } from "../../public/solana_movies";
 import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
 import { Program, Provider, web3 } from "@project-serum/anchor";
+import ParticlesBackground from "@/components/common/ParticlesBackground";
+import MainLayout from "@/components/layouts/MainLayout";
 
 export default function Home() {
     const [movies, setMovies] = useState([]);
@@ -40,22 +42,44 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="flex justify-center">
-            <div className="px-4" style={{ maxWidth: "1600px" }}>
-                <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
-                    {movies.map((movie, i) => (
-                        <div
-                            key={i}
-                            className="overflow-hidden rounded-xl border shadow"
-                        >
-                            <img
-                                style={{ height: "20rem" }}
-                                src={movie.account.gifUrl}
-                            />
-                        </div>
-                    ))}
+        <div>
+            <ParticlesBackground />
+            <MainLayout
+                className="relative"
+                title="Eventos"
+                description="Ultimos Eventos"
+            >
+                <div className="mx-auto max-w-7xl pt-6 ">
+                    <span className="text-center text-6xl font-bold text-white">
+                        Mis Tickets
+                    </span>
                 </div>
-            </div>
+                <div className="mx-auto max-w-7xl  pb-40 text-center ">
+                    <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
+                        {/* Evento 1 */}
+                        <div className="flex justify-center">
+                            <div
+                                className="px-4"
+                                style={{ maxWidth: "1600px" }}
+                            >
+                                <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
+                                    {movies.map((movie, i) => (
+                                        <div
+                                            key={i}
+                                            className="overflow-hidden rounded-xl border shadow"
+                                        >
+                                            <img
+                                                style={{ height: "20rem" }}
+                                                src={movie.account.gifUrl}
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </MainLayout>
         </div>
     );
 }

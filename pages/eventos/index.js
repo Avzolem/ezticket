@@ -20,7 +20,7 @@ export default function Home() {
                     <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                         {/* Evento 1 */}
 
-                        <div className="mx-4 rounded-md bg-purple-500 shadow">
+                        <div className="mx-4 rounded-md bg-[#7e22c3] shadow">
                             <Link href="/eventos/evento1" passHref>
                                 <div className="thumbitem my-4 mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">
@@ -49,7 +49,7 @@ export default function Home() {
 
                         {/* Evento 2 */}
 
-                        <div className="mx-4 rounded-md  bg-purple-500 shadow">
+                        <div className="mx-4 rounded-md  bg-[#7e22c3] shadow">
                             <Link href="/eventos/evento2" passHref>
                                 <div className="thumbitem my-4 mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">
@@ -77,7 +77,7 @@ export default function Home() {
                         </div>
 
                         {/* Evento 3 */}
-                        <div className="mx-4 rounded-md  bg-purple-500 shadow">
+                        <div className="mx-4 rounded-md  bg-[#7e22c3] shadow">
                             <Link href="/eventos/evento3" passHref>
                                 <div className="thumbitem my-4 mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">
@@ -106,7 +106,7 @@ export default function Home() {
 
                         {/* Evento 4 */}
 
-                        <div className="mx-4 rounded-md  bg-purple-500 shadow">
+                        <div className="mx-4 rounded-md  bg-[#7e22c3] shadow">
                             <Link href="/eventos/" passHref>
                                 <div className="thumbitem my-4 mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">

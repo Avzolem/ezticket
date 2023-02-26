@@ -46,7 +46,7 @@ export default function Home() {
                             <div className="mt-10 sm:flex sm:justify-center ">
                                 <div className="rounded-md bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700 shadow ">
                                     <a
-                                        href="/contact"
+                                        href="/eventos"
                                         className="flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-medium text-white  md:py-4 md:px-10 md:text-lg"
                                     >
                                         {" "}

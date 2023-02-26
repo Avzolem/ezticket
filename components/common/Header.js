@@ -15,8 +15,8 @@ const navigation = {
     categories: [],
     pages: [
         { name: "EVENTOS", href: "/eventos" },
-        { name: "CONTACTANOS", href: "/contact" },
         { name: "MIS TICKETS", href: "/mistickets" },
+        { name: "CONTACTANOS", href: "/contact" },
         { name: "CANDY MACHINE", href: "/candymachine" },
     ],
 };
