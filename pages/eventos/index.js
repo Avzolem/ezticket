@@ -111,7 +111,7 @@ export default function Home() {
                                 <div className="thumbitem my-4 mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">
                                         <Image
-                                            src="/images/evento1.png"
+                                            src="/images/evento4.png"
                                             alt=""
                                             width={240}
                                             height={240}
