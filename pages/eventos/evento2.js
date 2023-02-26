@@ -58,7 +58,7 @@ export default function AddMovie() {
             });
 
             // setInputMovieValue("https://i.imgur.com/YB0KTv1.jpg");
-            router.push("/");
+            router.push("/eventos/success");
         } else {
             console.log("Empty input. Try again.");
         }
