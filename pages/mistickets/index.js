@@ -5,6 +5,10 @@ import { Program, Provider, web3 } from "@project-serum/anchor";
 import ParticlesBackground from "@/components/common/ParticlesBackground";
 import MainLayout from "@/components/layouts/MainLayout";
 
+function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+}
+
 export default function Home() {
     const [movies, setMovies] = useState([]);
 
@@ -29,7 +33,14 @@ export default function Home() {
         try {
             const provider = getProvider();
             const program = new Program(IDL, programID, provider);
-            const getAllMovies = await program.account.movieGif.all();
+            const getAllMovies = await program.account.movieGif.all([
+                {
+                    memcmp: {
+                        bytes: provider.wallet.publicKey.toBase58(),
+                        offset: 8,
+                    },
+                },
+            ]);
             setMovies(getAllMovies);
         } catch (error) {
             console.log("Error in getGifList: ", error);
@@ -62,19 +73,28 @@ export default function Home() {
                                 className="px-4"
                                 style={{ maxWidth: "1600px" }}
                             >
-                                <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
-                                    {movies.map((movie, i) => (
-                                        <div
-                                            key={i}
-                                            className="overflow-hidden rounded-xl border shadow"
-                                        >
-                                            <img
-                                                style={{ height: "20rem" }}
-                                                src={movie.account.gifUrl}
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
+                                {movies && (
+                                    <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
+                                        {movies.map((movie, i) => (
+                                            <div
+                                                key={i}
+                                                className="overflow-hidden rounded-xl border shadow"
+                                            >
+                                                <img
+                                                    style={{ height: "20rem" }}
+                                                    src={movie.account.gifUrl}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                                {!movies && (
+                                    <div className="bg-indigo-500 p-32">
+                                        <span className="text-center text-6xl  text-white">
+                                            No hay tickets para mostrar
+                                        </span>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

@@ -35,7 +35,7 @@ export default function Candymachine() {
                             <br />
                         </p>
                         <a
-                            href="https://candy-machine-aucoin.vercel.app"
+                            href="https://candy-machine-eztickets.vercel.app"
                             className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-emerald-500 via-indigo-500 to-purple-500 px-5 py-3 text-base font-medium text-white hover:bg-purple-700 sm:w-auto"
                         >
                             Reclama el tuyo ahora! :D
