@@ -1,16 +1,16 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import Link from "next/link";
 import Image from "next/image";
-
+import ParticlesBackground from "@/components/common/ParticlesBackground";
 import React, { useState } from "react";
-import { IDL } from "../../public/solana_nfticket";
+import { IDL } from "../../public/solana_movies";
 import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
 import { Program, Provider, web3 } from "@project-serum/anchor";
 import { useRouter } from "next/router";
 
-export default function AddTicket() {
+export default function AddMovie() {
     const router = useRouter();
-    const [inputTicketValue] = useState("https://i.imgur.com/YB0KTv1.jpg");
+    const [inputMovieValue] = useState("https://i.imgur.com/7E3clXB.png");
     const programID = new PublicKey(IDL.metadata.address);
 
     const { SystemProgram, Keypair } = web3;
@@ -34,9 +34,9 @@ export default function AddTicket() {
         return new TextEncoder().encode(input);
     };
 
-    const addTicket = async () => {
-        if (inputTicketValue.length > 0) {
-            console.log("Ticket link:", inputTicketValue);
+    const addMovie = async () => {
+        if (inputMovieValue.length > 0) {
+            console.log("Movie link:", inputMovieValue);
 
             var provider = getProvider();
             var program = new Program(IDL, programID, provider);
@@ -44,20 +44,20 @@ export default function AddTicket() {
                 [
                     stringToBytes("gif_account"),
                     provider.wallet.publicKey.toBytes(),
-                    stringToBytes(inputTicketValue),
+                    stringToBytes(inputMovieValue),
                 ],
                 program.programId
             );
 
-            await program.rpc.initialize(inputTicketValue, {
+            await program.rpc.initialize(inputMovieValue, {
                 accounts: {
-                    ticketGif: pda,
+                    movieGif: pda,
                     user: provider.wallet.publicKey,
                     systemProgram: SystemProgram.programId,
                 },
             });
 
-            // setInputTicketValue("https://i.imgur.com/YB0KTv1.jpg");
+            // setInputMovieValue("https://i.imgur.com/YB0KTv1.jpg");
             router.push("/");
         } else {
             console.log("Empty input. Try again.");
@@ -66,7 +66,9 @@ export default function AddTicket() {
 
     return (
         <div>
+            <ParticlesBackground />
             <MainLayout
+                className="relative"
                 title="Etherfuse Hackathon"
                 description="Compra boletos para Hackathon Etherfuse"
             >
@@ -84,20 +86,22 @@ export default function AddTicket() {
                                             className="object-cover"
                                         />
                                     </div>
-                                    <div className="textcontainer text-justify-center px-6 pb-4 ">
-                                        <p className="mt-4 flex h-6 w-36 rounded-md bg-[#af2bd0] px-2 text-sm text-white">
+                                    <br />
+
+                                    <div className="textcontainer text-justify-center bg-white px-6 py-4 ">
+                                        <p className="mt-4 flex h-6 w-28 rounded-md bg-purple-700 px-2 text-sm text-white">
                                             Evento Activo
                                         </p>
-                                        <h2 className="title my-2 text-lg font-bold">
-                                            etherfuse Hackathon{" "}
+                                        <h2 className="title my-2 text-lg font-bold text-black">
+                                            Grizzlython{" "}
                                         </h2>
-                                        <p className="text-happy-pink-600 mb-4 text-sm font-bold capitalize">
-                                            24/02/2023
+                                        <p className="text-happy-pink-600 mb-4 text-sm font-bold capitalize text-gray-700">
+                                            02/02/2023
                                         </p>
 
                                         <div className="rounded-md shadow">
                                             <div className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700 px-8 py-3 text-base font-medium text-white  md:py-4 md:px-10 md:text-lg">
-                                                <button onClick={addTicket}>
+                                                <button onClick={addMovie}>
                                                     Comprar EzTicket
                                                 </button>
                                             </div>

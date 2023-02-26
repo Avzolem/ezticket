@@ -6,7 +6,7 @@ const data = {
     title: "EzTicket",
     description: "Obten EzTickets para tus eventos favoritos",
     url: "https://avsolem.com",
-    imageUrl: "/og.jpeg",
+    imageUrl: "/og.png",
     twitter: "@avsolem",
 };
 

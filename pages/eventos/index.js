@@ -39,7 +39,7 @@ export default function Home() {
                                         <p className="text-happy-[#af2bd0] mb-4 text-sm font-bold capitalize">
                                             24/02/2023
                                         </p>
-                                        <button className="cursor-pointer rounded-md bg-[#af2bd0] px-2 ">
+                                        <button className="mx-2 cursor-pointer rounded-md bg-[#af2bd0] px-6 py-2 ">
                                             Comprar Boleto
                                         </button>
                                     </div>
@@ -68,7 +68,7 @@ export default function Home() {
                                         <p className="text-happy-[#af2bd0] mb-4 text-sm font-bold capitalize">
                                             02/02/2023
                                         </p>
-                                        <button className="cursor-pointer rounded-md bg-[#af2bd0] px-2 ">
+                                        <button className="cursor-pointer rounded-md bg-[#af2bd0] px-2 py-2 ">
                                             Comprar Boleto
                                         </button>
                                     </div>
@@ -96,7 +96,7 @@ export default function Home() {
                                         <p className="text-happy-[#af2bd0] mb-4 text-sm font-bold capitalize">
                                             24/02/2023
                                         </p>
-                                        <button className="cursor-pointer rounded-md bg-[#af2bd0] px-2 ">
+                                        <button className="cursor-pointer rounded-md bg-[#af2bd0] px-2 py-2 ">
                                             Comprar Boleto
                                         </button>
                                     </div>
@@ -120,12 +120,12 @@ export default function Home() {
                                     </div>
                                     <div className="textcontainer px-2 pb-4 text-white">
                                         <h2 className="title my-2 text-lg font-bold">
-                                            etherfuse Hackathon{" "}
+                                            etherfuse Hackathon Chihuahua{" "}
                                         </h2>
                                         <p className="text-happy-[#af2bd0] mb-4 text-sm font-bold capitalize">
                                             24/02/2023
                                         </p>
-                                        <button className="cursor-pointer rounded-md bg-indigo-400 px-2 ">
+                                        <button className="cursor-pointer rounded-md bg-indigo-400 px-2 py-2 ">
                                             Agotados
                                         </button>
                                     </div>

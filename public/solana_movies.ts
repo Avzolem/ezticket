@@ -1,12 +1,12 @@
-export type SolanaTickets = {
+export type SolanaMovies = {
   version: "0.1.0";
-  name: "solana_tickets";
+  name: "solana_movies";
   instructions: [
     {
       name: "initialize";
       accounts: [
         {
-          name: "ticketGif";
+          name: "movieGif";
           isMut: true;
           isSigner: false;
         },
@@ -31,7 +31,7 @@ export type SolanaTickets = {
   ];
   accounts: [
     {
-      name: "ticketGif";
+      name: "movieGif";
       type: {
         kind: "struct";
         fields: [
@@ -48,19 +48,19 @@ export type SolanaTickets = {
     }
   ];
   metadata: {
-    address: "z6fesaPMBuL9G81NThTi66YsFWe1T4VRpjm9D2F8Wag";
+    address: "8PiZUdRtcBTpNx6MBiafx77EZUnfSFEuEZDR5RjEjDD7";
   };
 };
 
-export const IDL: SolanaTickets = {
+export const IDL: SolanaMovies = {
   version: "0.1.0",
-  name: "solana_tickets",
+  name: "solana_movies",
   instructions: [
     {
       name: "initialize",
       accounts: [
         {
-          name: "ticketGif",
+          name: "movieGif",
           isMut: true,
           isSigner: false,
         },
@@ -85,7 +85,7 @@ export const IDL: SolanaTickets = {
   ],
   accounts: [
     {
-      name: "ticketGif",
+      name: "movieGif",
       type: {
         kind: "struct",
         fields: [
@@ -102,6 +102,6 @@ export const IDL: SolanaTickets = {
     },
   ],
   metadata: {
-    address: "z6fesaPMBuL9G81NThTi66YsFWe1T4VRpjm9D2F8Wag",
+    address: "8PiZUdRtcBTpNx6MBiafx77EZUnfSFEuEZDR5RjEjDD7",
   },
 };

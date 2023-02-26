@@ -192,7 +192,7 @@ export default function Hero() {
                                 {" "}
                                 {/* Aqui va la imagen */}
                                 <img
-                                    src="https://interexy.com/wp-content/themes/AMS-Apps/images/case/ticketing/process-img-2.png"
+                                    src="/images/herotablet.png"
                                     className="w-[40rem]  "
                                 />
                             </div>
@@ -248,7 +248,7 @@ export default function Hero() {
                             <div className="relative isolate mx-auto overflow-hidden sm:mx-0 sm:max-w-none">
                                 {" "}
                                 <img
-                                    src="https://assets-global.website-files.com/62b4acc476ac97464d28883c/62ebe5f517fa633ddc7711e4_hero-phone%20(2).png"
+                                    src="/images/herophone.png"
                                     className=" w-[40rem]  "
                                 />
                             </div>
@@ -287,7 +287,7 @@ export default function Hero() {
                     <div className="relative overflow-hidden pt-16">
                         <div className="mx-auto max-w-7xl px-6 lg:px-8">
                             <img
-                                src="https://interexy.com/wp-content/themes/AMS-Apps/images/case/ticketing/tech-img.png"
+                                src="/images/herolap.png"
                                 alt="App screenshot"
                             />
                         </div>
