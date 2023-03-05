@@ -95,7 +95,7 @@ export default function AddMovie() {
 
                                     <div className="textcontainer text-justify-center bg-white px-6 py-4 ">
                                         <p className="mt-4 flex h-6 w-28 rounded-md bg-purple-700 px-2 text-sm text-white">
-                                            Evento Activo
+                                            Active Event
                                         </p>
                                         <h2 className="title my-2 text-lg font-bold text-black">
                                             etherfuse Hackathon{" "}
@@ -114,7 +114,7 @@ export default function AddMovie() {
                                         <div>
                                             <p className="mt-2 text-sm text-black">
                                                 <span className="font-bold">
-                                                    Precio de salida:
+                                                    Starting Price:
                                                 </span>{" "}
                                                 0.00141 SOL
                                             </p>
@@ -122,7 +122,7 @@ export default function AddMovie() {
                                         <div>
                                             <p className="mt-2 text-sm text-black">
                                                 <span className="font-bold">
-                                                    Precio actual:
+                                                    Actual Price:
                                                 </span>{" "}
                                                 0.59 MXN
                                             </p>

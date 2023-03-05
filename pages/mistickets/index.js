@@ -62,7 +62,7 @@ export default function Home() {
             >
                 <div className="mx-auto max-w-7xl pt-6 ">
                     <span className="text-center text-6xl font-bold text-white">
-                        Mis Tickets
+                        My Tickets
                     </span>
                 </div>
                 <div className="mx-auto max-w-7xl  pb-40 text-center ">
@@ -91,7 +91,7 @@ export default function Home() {
                                 {!movies && (
                                     <div className="bg-indigo-500 p-32">
                                         <span className="text-center text-6xl  text-white">
-                                            No hay tickets para mostrar
+                                            There are no tickets to display
                                         </span>
                                     </div>
                                 )}

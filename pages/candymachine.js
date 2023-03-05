@@ -9,11 +9,10 @@ export default function Candymachine() {
                 <div className="">
                     <div className="mx-auto max-w-2xl justify-center py-16 px-4 text-center sm:py-20 ">
                         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                            <span className="block"> Tu primer EzTicket</span>
+                            <span className="block"> Your first EzTicket</span>
 
                             <span className="block">
-                                Llevate un recuerdo de tu primer Hackathon de
-                                Etherfuse
+                                Take a souvenir of your first Grizzlython
                             </span>
                         </h2>
 
@@ -29,16 +28,16 @@ export default function Candymachine() {
 
                         <p className="mt-4 text-lg leading-6 text-white">
                             <br />
-                            Con este Candy Machine tienes la oportunidad de
-                            obtener un EzTicket de este evento, que puedes
-                            guardar en tu wallet favorita de Solana.
+                            With this Candy Machine you have the opportunity to
+                            get an EzTicket from this event, which you can save
+                            in your favorite Solana wallet.
                             <br />
                         </p>
                         <a
                             href="https://candy-machine-eztickets.vercel.app"
                             className="mt-8 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-emerald-500 via-indigo-500 to-purple-500 px-5 py-3 text-base font-medium text-white hover:bg-purple-700 sm:w-auto"
                         >
-                            Reclama el tuyo ahora! :D
+                            Claim yours now! :D
                         </a>
                     </div>
                 </div>

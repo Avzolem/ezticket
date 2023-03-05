@@ -14,9 +14,9 @@ const logoUrl = "/logo.png";
 const navigation = {
     categories: [],
     pages: [
-        { name: "EVENTOS", href: "/eventos" },
-        { name: "MIS TICKETS", href: "/mistickets" },
-        { name: "CONTACTANOS", href: "/contact" },
+        { name: "EVENTS", href: "/eventos" },
+        { name: "MY TICKETS", href: "/mistickets" },
+        { name: "CONTACT US", href: "/contact" },
         { name: "CANDY MACHINE", href: "/candymachine" },
     ],
 };

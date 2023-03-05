@@ -111,7 +111,7 @@ export default function Home() {
                                 </div>
                                 <div className="textcontainer text-justify-center px-6 pb-4 ">
                                     <p className="mt-4 flex h-6 w-36 rounded-md bg-[#af2bd0] px-2 text-sm text-white">
-                                        Evento Activo
+                                        Active Event
                                     </p>
                                     <h2 className="title my-2 text-lg font-bold">
                                         etherfuse Hackathon{" "}
@@ -134,13 +134,13 @@ export default function Home() {
                                             }}
                                             className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700 px-8 py-3 text-base font-medium text-white  md:py-4 md:px-10 md:text-lg"
                                         >
-                                            Comprar EzTicket
+                                            Buy EzTicket
                                         </div>
                                     </div>
                                     <div>
                                         <p className="mt-2 text-sm text-gray-500">
                                             <span className="font-bold">
-                                                Precio de salida:
+                                                Starting Price:
                                             </span>{" "}
                                             0.01 SOL
                                         </p>
@@ -148,7 +148,7 @@ export default function Home() {
                                     <div>
                                         <p className="mt-2 text-sm text-gray-500">
                                             <span className="font-bold">
-                                                Precio actual:
+                                                Actual Price:
                                             </span>{" "}
                                             0.01 SOL
                                         </p>
@@ -167,8 +167,8 @@ export default function Home() {
                                     ) : fetchError ? (
                                         <div className="py-24 text-center">
                                             <p className="text-lg text-red-500">
-                                                Hubo un error al cargar las
-                                                subastas 😢
+                                                There was an error loading the
+                                                events 😢
                                             </p>
                                         </div>
                                     ) : bids && bids.length > 0 ? (
@@ -180,19 +180,19 @@ export default function Home() {
                                                             scope="col"
                                                             className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                                                         >
-                                                            Comprador
+                                                            Buyer
                                                         </th>
                                                         <th
                                                             scope="col"
                                                             className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                                                         >
-                                                            Monto
+                                                            Amount
                                                         </th>
                                                         <th
                                                             scope="col"
                                                             className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500"
                                                         >
-                                                            Fecha
+                                                            Date
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -224,7 +224,7 @@ export default function Home() {
                                     ) : (
                                         <div className="py-24 text-center">
                                             <p className="text-lg text-gray-500">
-                                                No se encontraron subastas
+                                                No events found
                                             </p>
                                         </div>
                                     )}

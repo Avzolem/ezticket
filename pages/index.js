@@ -29,13 +29,13 @@ export default function Home() {
                         <div className="px-4 sm:px-8 lg:w-full ">
                             <h1 className="text-white-900 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                                 <span className=" text-white xl:inline">
-                                    Comprar{" "}
+                                    Buying a{" "}
                                 </span>{" "}
                                 <span className="  bg-gradient-to-r  from-emerald-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent xl:inline">
                                     EzTicket{" "}
                                 </span>
                                 <span className=" text-white xl:inline">
-                                    es tan facil como decir{" "}
+                                    is as easy as saying{" "}
                                 </span>{" "}
                                 <br />
                                 <span className=" bg-gradient-to-r  from-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
@@ -50,7 +50,7 @@ export default function Home() {
                                         className="flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-medium text-white  md:py-4 md:px-10 md:text-lg"
                                     >
                                         {" "}
-                                        <span>Mira los eventos!  </span>
+                                        <span>Look at the events!  </span>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             fill="none"
@@ -72,7 +72,7 @@ export default function Home() {
                                         href="#init"
                                         className="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-purple-500 hover:bg-gray-200 md:py-4 md:px-10 md:text-lg"
                                     >
-                                        ¿Que es EZTicket?
+                                        ¿What is EZTicket?
                                     </a>
                                 </div>
                             </div>
@@ -89,16 +89,16 @@ export default function Home() {
                         <div className="px-4 sm:px-8 lg:w-full ">
                             <h1 className="text-white-900 text-4xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                                 <span className="block text-white xl:inline">
-                                    Obten{" "}
+                                    Get an{" "}
                                 </span>{" "}
                                 <span className="block bg-gradient-to-r  from-emerald-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent xl:inline">
                                     EzTickets{" "}
                                 </span>
                                 <span className="block text-white xl:inline">
-                                    para los eventos que{" "}
+                                    for the events you{" "}
                                 </span>{" "}
                                 <span className="block text-purple-500 xl:inline">
-                                    adoras.{" "}
+                                    love.{" "}
                                 </span>{" "}
                             </h1>
 
@@ -109,7 +109,7 @@ export default function Home() {
                                         className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700 px-8 py-3 text-base font-medium text-white hover:bg-purple-700 md:py-4 md:px-10 md:text-lg"
                                     >
                                         {" "}
-                                        <span>¡Registrate Aqui!  </span>
+                                        <span>¡Sign up here!  </span>
                                     </a>
                                     <a name="scroll"></a>
                                 </div>

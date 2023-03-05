@@ -4,7 +4,7 @@ import { NextSeo } from "next-seo";
 const data = {
     siteName: "EzTicket.com",
     title: "EzTicket",
-    description: "Obten EzTickets para tus eventos favoritos",
+    description: "Get EzTickets for your favorite events",
     url: "https://avsolem.com",
     imageUrl: "/og.png",
     twitter: "@avsolem",

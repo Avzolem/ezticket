@@ -13,60 +13,60 @@ import {
 
 const feats = [
     {
-        name: "Autenticidad:",
+        name: "Authenticity:",
         description:
-            "los EzTickets son únicos y están vinculados a un evento específico, lo que significa que son prácticamente imposibles de falsificar. Esto garantiza que los asistentes al evento puedan estar seguros de que su boleto es auténtico y válido.",
+            "EzTickets are unique and tied to a specific event, which means they are virtually impossible to falsify. This ensures that event attendees can be sure that their ticket is authentic and valid.",
         icon: TicketIcon,
     },
     {
-        name: "Facilidad de transferencia:",
+        name: "Ease of transfer:",
         description:
-            "los EzTickets se pueden transferir fácilmente entre personas, lo que significa que si un asistente no puede asistir al evento, pueden vender o transferir su boleto de manera segura y fácil.",
+            "EzTickets are easily transferable between people, meaning that if an attendee is unable to make it to the event, they can safely and easily sell or transfer their ticket.",
         icon: TicketIcon,
     },
     {
-        name: "Control de acceso:",
+        name: "Access Control:",
         description:
-            "los organizadores del evento pueden usar los EzTickets para controlar el acceso al evento y asegurarse de que solo las personas con boletos válidos puedan ingresar. Esto puede ayudar a prevenir la sobrecapacidad y garantizar la seguridad de los asistentes.",
+            "Event organizers can use EzTickets to control access to the event and ensure that only people with valid tickets can enter. This can help prevent overcapacity and ensure attendee safety.",
         icon: TicketIcon,
     },
     {
-        name: "Mejora la experiencia del asistente: ",
+        name: "Improve the attendee experience: ",
         description:
-            " los EzTickets pueden ofrecer una experiencia más interactiva y personalizada para los asistentes al evento. Por ejemplo, se pueden usar para ofrecer contenido exclusivo o para desbloquear ofertas especiales dentro del evento.",
+            " EzTickets can offer a more interactive and personalized experience for event attendees. For example, they can be used to offer exclusive content or to unlock special offers within the event.",
         icon: TicketIcon,
     },
     {
-        name: "Registro y seguimiento:",
+        name: "Registration and monitoring:",
         description:
-            "los EzTickets permiten el registro y seguimiento de la propiedad de los boletos, lo que significa que los organizadores del evento pueden realizar un seguimiento de quién ha comprado un boleto y cuántos boletos se han vendido en total. Esto puede ser útil para la planificación y promoción futuras del evento.",
+            "EzTickets enable ticket ownership registration and tracking, which means event organizers can keep track of who has purchased a ticket and how many tickets have been sold in total. This can be helpful for future event planning and promotion.",
         icon: TicketIcon,
     },
     {
         name: "EzTickets:",
         description:
-            "En resumen, los EzTickets ofrecen una forma segura, fácil y eficiente de administrar los boletos para eventos y pueden mejorar significativamente la experiencia tanto de los organizadores como de los asistentes al evento.",
+            "In short, EzTickets offer a secure, easy, and efficient way to manage event tickets and can significantly enhance the experience for both event organizers and attendees.",
         icon: TicketIcon,
     },
 ];
 
 const features = [
     {
-        name: "Un boleto mas seguro: ",
+        name: "A safer ticket:",
         description:
-            "Tus boletos estan seguros en la blockchain de Solana, nadie puede modificarlos o robarlos",
+            "Your tickets are safe on the Solana blockchain, nobody can modify or steal them.",
         icon: TicketIcon,
     },
     {
-        name: "Un boleto unico: ",
+        name: "A unique ticket:",
         description:
-            "EzTicket es un boleto unico, no hay copias, no hay falsificaciones. Trabajamos con la tecnologia NFT.",
+            "EzTicket is a unique ticket, there are no copies, there are no counterfeits. We work with NFT technology.",
         icon: TicketIcon,
     },
     {
-        name: "Un boleto para el futuro:",
+        name: "A ticket to the future:",
         description:
-            "Podras coleccionar tus EzTickets y revenderlos en el futuro. Tu decides el precio.",
+            "You can collect your Tickets and sell them in the future. You decide the price.",
         icon: TicketIcon,
     },
 ];
@@ -96,12 +96,12 @@ export default function Hero() {
                             <div className="m-auto">
                                 <h1 className="text-white-900 text-center text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                                     <span className=" text-white xl:inline">
-                                        Descubre Eventos{" "}
+                                        Discover Events{" "}
                                     </span>{" "}
                                 </h1>
                                 <h1 className="text-white-900 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
                                     <span className=" bg-gradient-to-r  from-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
-                                        Compra y Vende{" "}
+                                        Buy and sell{" "}
                                     </span>
                                     <span className=" bg-gradient-to-r  from-emerald-500 via-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
                                         EzTickets{" "}
@@ -124,16 +124,16 @@ export default function Hero() {
                             <div className="px-6 lg:px-0 lg:pt-4 lg:pr-4">
                                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                                     <h2 className="text-base font-semibold leading-7 text-purple-500">
-                                        Da un salto a la Web3
+                                        Jump in to Web3
                                     </h2>
                                     <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                                        Un boleto con toda la seguridad del
+                                        A ticket with all the security of
                                         blockchain
                                     </p>
                                     <p className="mt-6 text-lg leading-8 text-white">
-                                        Crea eventos y gestionalos de forma
-                                        segura y sencilla, o descubre los
-                                        eventos que hay en tu ciudad.
+                                        Create events and manage them safe and
+                                        simple, or discover the events in your
+                                        city.
                                     </p>
                                     <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-white lg:max-w-none">
                                         {features.map((feature) => (
@@ -201,12 +201,12 @@ export default function Hero() {
                             <div className="m-auto">
                                 <h1 className="text-white-900 text-center text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                                     <span className=" text-white xl:inline">
-                                        Gestiona tu cuenta{" "}
+                                        Manage your account{" "}
                                     </span>{" "}
                                 </h1>
                                 <h1 className="text-white-900 text-center text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
                                     <span className=" bg-gradient-to-r  from-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
-                                        Colecciona tus{" "}
+                                        Collect your{" "}
                                     </span>
                                     <span className=" bg-gradient-to-r  from-emerald-500 via-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
                                         EzTickets{" "}
@@ -229,7 +229,7 @@ export default function Hero() {
                             <div className="m-auto">
                                 <h1 className="text-white-900  text-center text-3xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                                     <span className=" text-white xl:inline">
-                                        Descarga la App{" "}
+                                        Download the App{" "}
                                     </span>{" "}
                                 </h1>
                                 <br />
@@ -243,13 +243,13 @@ export default function Hero() {
                                 <br />
                                 <h1 className="text-white-900 text-center text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
                                     <span className=" bg-gradient-to-r  from-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
-                                        Consulta los horarios, comparte tus{" "}
+                                        Check the schedules, share your{" "}
                                     </span>
                                     <span className=" bg-gradient-to-r  from-emerald-500 via-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
                                         EzTickets{" "}
                                     </span>
                                     <span className=" bg-gradient-to-r  from-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
-                                        en las redes sociales.{" "}
+                                        on social networks.{" "}
                                     </span>
                                 </h1>
                             </div>
@@ -320,9 +320,8 @@ export default function Hero() {
                             </div>
 
                             <p className="mt-6 text-lg leading-8 text-gray-300">
-                                Con todo el poder de la blockchain de Solana
-                                para crear una experiencia de usuario
-                                inigualable.
+                                With all the power of the Solana blockchain to
+                                create a user experience matchless.
                             </p>
                             <br />
                             <br />

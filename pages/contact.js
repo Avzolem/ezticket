@@ -100,15 +100,15 @@ const ContactPage = () => {
                         </svg>
                         <div className="text-center text-3xl font-extrabold  sm:text-4xl">
                             <h2 className="tracking-tight text-white ">
-                                Quieres crear un evento con{" "}
+                                Do you want to create an event with{" "}
                             </h2>
                             <span className=" bg-gradient-to-r  from-emerald-500 via-indigo-500  to-purple-500 bg-clip-text text-transparent xl:inline">
                                 EzTickets?{" "}
                             </span>
                             <p className="mt-4 text-lg leading-6 text-white">
-                                Si te interesa realizar un evento con nosotros,
-                                ponte en contacto con nuestro equipo de ventas,
-                                para más información.
+                                If you are interested in holding an event with
+                                us, get in touch with our sales team, for more
+                                information.
                             </p>
                         </div>
                         <div className="mt-12">
@@ -121,7 +121,7 @@ const ContactPage = () => {
                                         htmlFor="firstName"
                                         className="block text-sm font-medium text-purple-500"
                                     >
-                                        Nombre
+                                        Name
                                     </label>
                                     <div className="mt-1">
                                         <input
@@ -150,7 +150,7 @@ const ContactPage = () => {
                                         htmlFor="lastName"
                                         className="block text-sm font-medium text-purple-500"
                                     >
-                                        Apellido
+                                        Last Name
                                     </label>
                                     <div className="mt-1">
                                         <input
@@ -179,7 +179,7 @@ const ContactPage = () => {
                                         htmlFor="company"
                                         className="block text-sm font-medium text-purple-500"
                                     >
-                                        Compañía/Club
+                                        Company/Club
                                     </label>
                                     <div className="mt-1">
                                         <input
@@ -237,7 +237,7 @@ const ContactPage = () => {
                                         htmlFor="phone"
                                         className="block text-sm font-medium text-purple-500"
                                     >
-                                        Número telefónico
+                                        Phone Number
                                     </label>
                                     <div className="relative mt-1 rounded-md shadow-sm">
                                         <div className="absolute inset-y-0 left-0 flex items-center">
@@ -245,7 +245,7 @@ const ContactPage = () => {
                                                 htmlFor="country"
                                                 className="sr-only"
                                             >
-                                                País
+                                                Country
                                             </label>
                                             <select
                                                 id="country"
@@ -284,7 +284,7 @@ const ContactPage = () => {
                                         htmlFor="message"
                                         className="block text-sm font-medium text-purple-500"
                                     >
-                                        Mensaje
+                                        Message
                                     </label>
                                     <div className="mt-1">
                                         <textarea
@@ -332,8 +332,7 @@ const ContactPage = () => {
                                                 )}
                                             >
                                                 <span className="sr-only">
-                                                    Acuerdo de políticas de
-                                                    privacidad
+                                                    Privacy Policy Agreement
                                                 </span>
                                                 <span
                                                     aria-hidden="true"
@@ -348,20 +347,20 @@ const ContactPage = () => {
                                         </div>
                                         <div className="ml-3">
                                             <p className="text-base text-purple-500">
-                                                Seleccionando esto, estás de
-                                                acuerdo con nuestra{" "}
+                                                By selecting this, you agree to
+                                                our{" "}
                                                 <a
                                                     href="#"
                                                     className="font-medium text-indigo-500 underline"
                                                 >
-                                                    Política de privacidad
+                                                    Privacy Policy
                                                 </a>{" "}
                                                 and{" "}
                                                 <a
                                                     href="#"
                                                     className="font-medium text-indigo-500 underline"
                                                 >
-                                                    Política de Cookies
+                                                    Cookies Policy
                                                 </a>
                                                 .
                                             </p>
@@ -378,7 +377,7 @@ const ContactPage = () => {
                                         type="submit"
                                         className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-emerald-500 via-indigo-500 to-purple-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                                     >
-                                        ¡Charlemos!
+                                        ¡Let's Talk!
                                     </button>
                                 </div>
                             </form>

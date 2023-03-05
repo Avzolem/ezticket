@@ -90,7 +90,7 @@ export default function AddMovie() {
 
                                     <div className="textcontainer text-justify-center bg-white px-6 py-4 ">
                                         <p className="mt-4 flex h-6 w-28 rounded-md bg-purple-700 px-2 text-sm text-white">
-                                            Evento Activo
+                                            Active Event
                                         </p>
                                         <h2 className="title my-2 text-lg font-bold text-black">
                                             Superteams MX Bounty Season 1{" "}
@@ -102,14 +102,14 @@ export default function AddMovie() {
                                         <div className="rounded-md shadow">
                                             <div className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700 px-8 py-3 text-base font-medium text-white  md:py-4 md:px-10 md:text-lg">
                                                 <button onClick={addMovie}>
-                                                    Comprar EzTicket
+                                                    Buy EzTicket
                                                 </button>
                                             </div>
                                         </div>
                                         <div>
                                             <p className="mt-2 text-sm text-gray-500">
                                                 <span className="font-bold">
-                                                    Precio de salida:
+                                                    Starting Price:
                                                 </span>{" "}
                                                 0.00141 SOL
                                             </p>
@@ -117,7 +117,7 @@ export default function AddMovie() {
                                         <div>
                                             <p className="mt-2 text-sm text-gray-500">
                                                 <span className="font-bold">
-                                                    Precio actual:
+                                                    Actual Price:
                                                 </span>{" "}
                                                 0.59 MXN
                                             </p>

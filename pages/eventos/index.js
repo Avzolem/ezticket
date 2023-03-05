@@ -40,7 +40,7 @@ export default function Home() {
                                             24/02/2023
                                         </p>
                                         <button className="mx-2 cursor-pointer rounded-md bg-[#af2bd0] px-6 py-2 ">
-                                            Comprar Boleto
+                                            Buy Ticket
                                         </button>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ export default function Home() {
                                             02/02/2023
                                         </p>
                                         <button className="cursor-pointer rounded-md bg-[#af2bd0] px-2 py-2 ">
-                                            Comprar Boleto
+                                            Buy Ticket
                                         </button>
                                     </div>
                                 </div>
@@ -97,7 +97,7 @@ export default function Home() {
                                             24/02/2023
                                         </p>
                                         <button className="cursor-pointer rounded-md bg-[#af2bd0] px-2 py-2 ">
-                                            Comprar Boleto
+                                            Buy Ticket
                                         </button>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@ export default function Home() {
                                             24/02/2023
                                         </p>
                                         <button className="cursor-pointer rounded-md bg-indigo-400 px-2 py-2 ">
-                                            Agotados
+                                            Sold Out
                                         </button>
                                     </div>
                                 </div>
