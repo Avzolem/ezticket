@@ -60,7 +60,7 @@ export default function Home() {
                 title="Eventos"
                 description="Ultimos Eventos"
             >
-                <div className="mx-auto max-w-7xl pt-6 ">
+                <div className="mx-auto max-w-7xl px-6 pt-6">
                     <span className="text-center text-6xl font-bold text-white">
                         My Tickets
                     </span>

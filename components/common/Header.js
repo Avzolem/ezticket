@@ -8,16 +8,17 @@ import classNames from "@/utils/classNames";
 import { useEffect } from "react";
 import { Router, useRouter } from "next/router";
 import Image from "next/image";
+import { connectWallet } from "@heroicons/react/solid";
 
 //HEADER SETUP
 const logoUrl = "/logo.png";
 const navigation = {
     categories: [],
     pages: [
-        { name: "EVENTS", href: "/eventos" },
-        { name: "MY TICKETS", href: "/mistickets" },
-        { name: "CONTACT US", href: "/contact" },
-        { name: "CANDY MACHINE", href: "/candymachine" },
+        { name: "EVENTS 🎫", href: "/eventos" },
+        { name: "MY TICKETS 🎟️", href: "/mistickets" },
+        { name: "CONTACT US 📩", href: "/contact" },
+        { name: "CANDY MACHINE 🍬", href: "/candymachine" },
     ],
 };
 let phantom;
@@ -206,12 +207,28 @@ const Header = () => {
                                 </Menu>
                             ) : (
                                 <button
-                                    className="rounded-md bg-purple-500 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
+                                    className="  rounded-md bg-purple-500 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
                                     onClick={() => {
                                         connectWallet();
                                     }}
                                 >
-                                    <a>Conectar cartera </a>
+                                    <div className="flex items-center space-x-2">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            strokeWidth={1.5}
+                                            stroke="currentColor"
+                                            className="h-6 w-6"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3"
+                                            />
+                                        </svg>
+                                        <span>Conect Wallet</span>
+                                    </div>
                                 </button>
                             )}
                         </div>

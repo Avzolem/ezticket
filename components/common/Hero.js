@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
-import { TicketIcon } from "@heroicons/react/solid";
+
 import {
     ArrowPathIcon,
     CloudArrowUpIcon,
@@ -9,6 +9,7 @@ import {
     FingerPrintIcon,
     LockClosedIcon,
     ServerIcon,
+    TicketIcon,
 } from "@heroicons/react/solid";
 
 const feats = [
