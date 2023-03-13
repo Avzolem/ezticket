@@ -71,50 +71,6 @@ export default function Slideck() {
                             </div>
                         </div>
 
-                        <p className="mt-4 text-lg leading-6 text-white">
-                            <br />
-                            <section className="relative">
-                                <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-                                    <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-                                        {feats.map((feat) => (
-                                            <div
-                                                key={feat.name}
-                                                className="relative pl-9"
-                                            >
-                                                <dt className="inline font-semibold text-white">
-                                                    <feat.icon
-                                                        className="absolute top-1 left-1 h-5 w-5 text-indigo-500"
-                                                        aria-hidden="true"
-                                                    />
-                                                    {feat.name}
-                                                </dt>{" "}
-                                                <dd className="inline">
-                                                    {feat.description}
-                                                </dd>
-                                            </div>
-                                        ))}
-                                    </dl>
-                                </div>
-                                <br />
-                                <br />
-                                <br />
-                                <div className="relative overflow-hidden pt-16">
-                                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                                        <img
-                                            src="/images/herolap.png"
-                                            alt="App screenshot"
-                                        />
-                                    </div>
-                                </div>
-
-                                <br />
-                                <br />
-                                <br />
-                                <br />
-                            </section>
-                            <br />
-                        </p>
-
                         <LiteYouTubeEmbed
                             aspectHeight={9}
                             aspectWidth={16}
@@ -122,6 +78,49 @@ export default function Slideck() {
                             title="EzTicket"
                         />
                     </div>
+                    <p className="mt-4 text-lg leading-6 text-white">
+                        <br />
+                        <section className="relative">
+                            <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
+                                <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
+                                    {feats.map((feat) => (
+                                        <div
+                                            key={feat.name}
+                                            className="relative pl-9"
+                                        >
+                                            <dt className="inline font-semibold text-white">
+                                                <feat.icon
+                                                    className="absolute top-1 left-1 h-5 w-5 text-indigo-500"
+                                                    aria-hidden="true"
+                                                />
+                                                {feat.name}
+                                            </dt>{" "}
+                                            <dd className="inline">
+                                                {feat.description}
+                                            </dd>
+                                        </div>
+                                    ))}
+                                </dl>
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <div className="relative overflow-hidden pt-16">
+                                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                                    <img
+                                        src="/images/herolap.png"
+                                        alt="App screenshot"
+                                    />
+                                </div>
+                            </div>
+
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </section>
+                        <br />
+                    </p>
                 </div>
             </MainLayout>
         </div>
