@@ -19,6 +19,7 @@ const navigation = {
         { name: "MY TICKETS 🎟️", href: "/mistickets" },
         { name: "CONTACT US 📩", href: "/contact" },
         { name: "CANDY MACHINE 🍬", href: "/candymachine" },
+        { name: "SLIDE DECK 📊", href: "/slideck" },
     ],
 };
 let phantom;

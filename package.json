@@ -41,6 +41,7 @@
     "react-dom": "17.0.2",
     "react-hook-form": "^7.28.0",
     "react-hot-toast": "^2.2.0",
+    "react-lite-youtube-embed": "^2.3.52",
     "react-scripts": "4.0.3",
     "react-tsparticles": "^2.7.1",
     "tailwindcss": "^3.2.4",
