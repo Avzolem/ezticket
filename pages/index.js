@@ -83,23 +83,18 @@ export default function Home() {
 
                         <Hero />
                     </div>
-                    <div></div>
 
-                    <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center lg:py-32 ">
+                    <div className="mx-auto w-full max-w-7xl pt-16 pb-20 text-center md:inline-flex lg:py-32 ">
                         <div className="px-4 sm:px-8 lg:w-full ">
                             <h1 className="text-white-900 text-4xl font-bold tracking-tight sm:text-3xl md:text-4xl">
-                                <span className="block text-white xl:inline">
-                                    Get an{" "}
-                                </span>{" "}
-                                <span className="block bg-gradient-to-r  from-emerald-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent xl:inline">
+                                <span className=" text-white">Get an </span>{" "}
+                                <span className=" bg-gradient-to-r  from-emerald-500 via-indigo-500  to-purple-500 bg-clip-text text-transparent ">
                                     EzTickets{" "}
                                 </span>
-                                <span className="block text-white xl:inline">
+                                <span className=" text-white ">
                                     for the events you{" "}
                                 </span>{" "}
-                                <span className="block text-purple-500 xl:inline">
-                                    love.{" "}
-                                </span>{" "}
+                                <span className=" text-purple-500">love. </span>{" "}
                             </h1>
 
                             <div className="mt-10 sm:flex sm:justify-center ">
