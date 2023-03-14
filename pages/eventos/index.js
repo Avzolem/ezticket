@@ -146,9 +146,9 @@ export default function Home() {
                 title="Eventos"
                 description="Ultimos Eventos"
             >
-                <div className="flex items-center justify-center">
-                    <span className=" px-6  text-5xl font-bold text-white">
-                        Events
+                <div className="flex items-center justify-center py-6">
+                    <span className="bg-gradient-to-r  from-emerald-500 via-indigo-500  to-purple-500 bg-clip-text text-3xl font-bold text-transparent md:text-6xl xl:inline">
+                        Our Ez-Events
                     </span>
                 </div>
                 <div className="flex items-center justify-center">
@@ -179,9 +179,8 @@ export default function Home() {
                         </>
                     ) : (
                         <div>
-                            <br />
                             <h1 className="text-white">
-                                Please connect your wallet to create EzEvents
+                                Please connect your wallet to create Ez-Events
                             </h1>
                         </div>
                     )}
@@ -315,9 +314,9 @@ export default function Home() {
 
                 {tickets.map((ticket) => (
                     <div className="content my-16 flex items-center justify-center">
-                        <div className="mt-10  sm:justify-center">
+                        <div className="mt-10  sm:flex sm:justify-center lg:justify-start">
                             <div className="rounded-md shadow">
-                                <div className=" mx-4 mb-4  shadow-md">
+                                <div className=" thumbitem  mx-4 mb-4 cursor-pointer  shadow-md">
                                     <div className="photocontainer">
                                         <img
                                             src={ticket.img}
@@ -370,9 +369,9 @@ export default function Home() {
                                                 >
                                                     Buy EzTicket
                                                 </button>
-                                                <br />
                                             </div>
                                         </div>
+                                        <br />
                                         <div className="rounded-md shadow">
                                             <div className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700 px-8 py-3 text-base font-medium text-white  md:py-4 md:px-10 md:text-lg">
                                                 <button
