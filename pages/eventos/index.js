@@ -296,14 +296,12 @@ export default function Home() {
             Events Created by EzUsers
           </span>
         </div>
-
-        {/* //daisyUI Card */}
-
+        {/* Event Cards */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {" "}
           {tickets.map((ticket) => (
             <div className="content  my-16 flex items-center justify-center">
-              <div className="card w-96 bg-base-100 shadow-xl">
+              <div className="card h-full w-96 bg-base-100 shadow-xl">
                 <figure>
                   <img src={ticket.img} alt="Event" width={512} height={512} />
                 </figure>
