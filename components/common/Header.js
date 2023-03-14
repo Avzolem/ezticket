@@ -8,6 +8,7 @@ import classNames from "@/utils/classNames";
 import { useEffect } from "react";
 import { Router, useRouter } from "next/router";
 import Image from "next/image";
+import toast, { Toaster } from "react-hot-toast";
 
 //HEADER SETUP
 const logoUrl = "/logo.png";
@@ -45,6 +46,16 @@ const Header = () => {
         }
     }, []);
 
+    const getProvider = () => {
+        if ("phantom" in window) {
+            const provider = window.phantom?.solana;
+
+            if (provider?.isPhantom) {
+                return provider;
+            }
+        }
+    };
+
     const connectWallet = async () => {
         if ("phantom" in window) {
             const provider = window.phantom?.solana;
@@ -57,8 +68,8 @@ const Header = () => {
                         console.log("Phantom wallet is installed");
                         const response = await phantom.connect();
                         console.log(response.publicKey.toString());
-                        //loginWithPhantom();
-                        router.push("/auth/signin");
+                        loginWithPhantom();
+                        //router.push("/auth/signin");
                     } else {
                         console.log("Phantom wallet is not installed");
                         window.open("https://phantom.app/", "_blank");
@@ -71,6 +82,36 @@ const Header = () => {
             }
         } else {
             window.open("https://phantom.app/", "_blank");
+        }
+    };
+
+    const loginWithPhantom = async () => {
+        try {
+            const provider = getProvider();
+            const message =
+                "Para evitar que alguien se haga pasar por ti, necesitamos que firmes este mensaje";
+            const encodeMessage = new TextEncoder().encode(message);
+            const signedMessage = await provider.request({
+                method: "signMessage",
+                params: {
+                    message: encodeMessage,
+                    display: "UTF-8",
+                },
+            });
+            if (signedMessage.signature) {
+                window.localStorage.setItem(
+                    "signature",
+                    signedMessage.signature
+                );
+                window.localStorage.setItem(
+                    "publicKey",
+                    signedMessage.publicKey
+                );
+                console.log(signedMessage);
+                router.push("/");
+            }
+        } catch (error) {
+            console.log(error);
         }
     };
 
