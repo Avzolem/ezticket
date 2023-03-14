@@ -80,6 +80,11 @@ const CreateEvent = () => {
 
     // SUBMIT FUNCTION
     const onSubmit = async (data) => {
+        setGlobalError("");
+        if (!agreed) {
+            setGlobalError("You must agree to the terms and conditions");
+            return;
+        }
         //DO WHATEVER YOU WANT HERE
         setSubmitLoading(true);
 

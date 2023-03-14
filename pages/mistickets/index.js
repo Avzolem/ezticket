@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { IDL } from "../../public/solana_movies";
+import idl from "../../public/idl.json";
 import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
-import { Program, Provider, web3 } from "@project-serum/anchor";
 import ParticlesBackground from "@/components/common/ParticlesBackground";
 import MainLayout from "@/components/layouts/MainLayout";
+import {
+    Program,
+    AnchorProvider,
+    web3,
+    utils,
+    BN,
+} from "@project-serum/anchor";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
 }
 
 export default function Home() {
-    const [movies, setMovies] = useState([]);
+    const [tickets, setTickets] = useState([]);
 
-    const programID = new PublicKey(IDL.metadata.address);
+    const programID = new PublicKey(idl.metadata.address);
 
     const network = clusterApiUrl("devnet");
     const opts = {
@@ -21,7 +27,7 @@ export default function Home() {
 
     const getProvider = () => {
         const connection = new Connection(network, opts.preflightCommitment);
-        const provider = new Provider(
+        const provider = new AnchorProvider(
             connection,
             window.solana,
             opts.preflightCommitment
@@ -29,27 +35,22 @@ export default function Home() {
         return provider;
     };
 
-    const getMovieList = async () => {
-        try {
-            const provider = getProvider();
-            const program = new Program(IDL, programID, provider);
-            const getAllMovies = await program.account.movieGif.all([
-                {
-                    memcmp: {
-                        bytes: provider.wallet.publicKey.toBase58(),
-                        offset: 8,
-                    },
-                },
-            ]);
-            setMovies(getAllMovies);
-        } catch (error) {
-            console.log("Error in getGifList: ", error);
-            setMovies(null);
-        }
+    const getTickets = async () => {
+        const connection = new Connection(network, opts.preflightCommitment);
+        const provider = getProvider();
+        const program = new Program(idl, programID, provider);
+        Promise.all(
+            (await connection.getProgramAccounts(programID)).map(
+                async (ticket) => ({
+                    ...(await program.account.ticket.fetch(ticket.pubkey)),
+                    pubkey: ticket.pubkey,
+                })
+            )
+        ).then((tickets) => setTickets(tickets));
     };
 
     useEffect(() => {
-        getMovieList();
+        getTickets();
     }, []);
 
     return (
@@ -73,23 +74,23 @@ export default function Home() {
                                 className="px-4"
                                 style={{ maxWidth: "1600px" }}
                             >
-                                {movies && (
+                                {tickets && (
                                     <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
-                                        {movies.map((movie, i) => (
+                                        {tickets.map((ticket, i) => (
                                             <div
                                                 key={i}
                                                 className="overflow-hidden rounded-xl border shadow"
                                             >
                                                 <img
                                                     style={{ height: "20rem" }}
-                                                    src={movie.account.gifUrl}
+                                                    src={ticket.img}
                                                 />
                                             </div>
                                         ))}
                                     </div>
                                 )}
-                                {!movies && (
-                                    <div className="bg-indigo-500 p-32">
+                                {!tickets && (
+                                    <div className="rounded-xl bg-gray-600/75 p-32">
                                         <span className="text-center text-6xl  text-white">
                                             There are no tickets to display
                                         </span>

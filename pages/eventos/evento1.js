@@ -104,28 +104,32 @@ export default function AddMovie() {
                                             24/02/2023
                                         </p>
 
+                                        <div>
+                                            <p className="mt-2 text-xl text-black">
+                                                <span className="font-bold">
+                                                    Starting Price:{" "}
+                                                    <span className="text-emerald-500">
+                                                        0.00141 SOL
+                                                    </span>
+                                                </span>
+                                            </p>
+                                        </div>
+
+                                        <div>
+                                            <p className="mt-2 text-sm text-black">
+                                                <span className="font-bold">
+                                                    Actual Price:
+                                                </span>{" "}
+                                                0.0304 USD
+                                            </p>
+                                        </div>
+                                        <br />
                                         <div className="rounded-md shadow">
                                             <div className="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-indigo-700 via-violet-700 to-purple-700 px-8 py-3 text-base font-medium text-white  md:py-4 md:px-10 md:text-lg">
                                                 <button onClick={addMovie}>
                                                     Comprar EzTicket
                                                 </button>
                                             </div>
-                                        </div>
-                                        <div>
-                                            <p className="mt-2 text-sm text-black">
-                                                <span className="font-bold">
-                                                    Starting Price:
-                                                </span>{" "}
-                                                0.00141 SOL
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p className="mt-2 text-sm text-black">
-                                                <span className="font-bold">
-                                                    Actual Price:
-                                                </span>{" "}
-                                                0.59 MXN
-                                            </p>
                                         </div>
                                     </div>
                                 </div>
