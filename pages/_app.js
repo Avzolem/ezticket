@@ -1,8 +1,7 @@
 import "../styles/globals.css";
-import { SessionProvider } from "next-auth/react";
-import Link from "next/link";
+
 import React, { useEffect, useState } from "react";
-import styles from "../styles/Home.module.css";
+
 import idl from "../public/idl.json";
 import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
 import {
@@ -35,32 +34,6 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         return provider;
     };
 
-    const checkIfWalletIsConnected = async () => {
-        try {
-            const { solana } = window;
-            if (solana) {
-                if (solana.isPhantom) {
-                    console.log("Phantom wallet found!");
-                    const response = await solana.connect({
-                        onlyIfTrusted: true,
-                    });
-                    console.log(
-                        "Connected with public key:",
-                        response.publicKey.toString()
-                    );
-                    setWalletAddress(response.publicKey.toString());
-                }
-            } else {
-                toast.error("Please install Phantom Wallet...");
-                setTimeout(() => {
-                    window.open("https://phantom.app/", "_blank");
-                }, 2000);
-            }
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
     const setpay = async (publicKey, price) => {
         try {
             const provider = getProvider();
@@ -81,19 +54,15 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
     };
 
     useEffect(() => {
-        const onLoad = async () => {
-            await checkIfWalletIsConnected();
-        };
+        const onLoad = async () => {};
         window.addEventListener("load", onLoad);
         return () => window.removeEventListener("load", onLoad);
     }, []);
 
     return (
-        <div>
-            <SessionProvider session={session}>
-                <Component {...pageProps} />
-            </SessionProvider>
-        </div>
+        <>
+            <Component {...pageProps} />
+        </>
     );
 }
 

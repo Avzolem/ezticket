@@ -34,6 +34,7 @@ export default function Home() {
     useEffect(() => {
         getTickets();
         const onLoad = async () => {
+            setWalletAddress(null);
             await checkIfWalletIsConnected();
         };
         window.addEventListener("load", onLoad);

@@ -26,9 +26,9 @@ const navigation = {
 let phantom;
 
 const Header = () => {
-    const { data: session } = useSession();
     const router = useRouter();
     const [publicKey, setPublicKey] = useState(null);
+    const [provider, setProvider] = useState(null);
 
     useEffect(() => {
         if ("phantom" in window) {
@@ -128,11 +128,13 @@ const Header = () => {
     };
 
     const signOutWallet = () => {
+        solana.disconnect();
         console.log("sign out");
         window.localStorage.removeItem("publicKey");
         window.localStorage.removeItem("signature");
+        setProvider(null);
         setPublicKey(null);
-        solana.disconnect();
+        toast.success("Wallet disconnected");
         router.reload(window.location.pathname);
     };
 
@@ -203,50 +205,15 @@ const Header = () => {
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95"
                                     >
-                                        <Menu.Items className="absolute right-0 z-40 mt-2 w-48 origin-top-right rounded-md bg-black py-1 shadow-lg ring-1 ring-white ring-opacity-5 focus:outline-none">
-                                            <Menu.Item>
-                                                {({ active }) => (
-                                                    <Link href="/user/profile">
-                                                        <a
-                                                            className={classNames(
-                                                                active
-                                                                    ? "bg-gray-100"
-                                                                    : "",
-                                                                "block px-4 py-2 text-sm text-white"
-                                                            )}
-                                                        >
-                                                            Mi Cuenta
-                                                        </a>
-                                                    </Link>
-                                                )}
-                                            </Menu.Item>
-                                            {true && (
-                                                <Menu.Item>
-                                                    {({ active }) => (
-                                                        <Link href="/admin/dashboard">
-                                                            <a
-                                                                className={classNames(
-                                                                    active
-                                                                        ? "bg-black"
-                                                                        : "",
-                                                                    "block px-4 py-2 text-sm text-white"
-                                                                )}
-                                                            >
-                                                                Admin Dashboard
-                                                            </a>
-                                                        </Link>
-                                                    )}
-                                                </Menu.Item>
-                                            )}
-
+                                        <Menu.Items className="absolute right-0 z-40 mt-2 w-48 origin-top-right rounded-xl bg-purple-500 py-1 shadow-lg ring-1 ring-white ring-opacity-5 focus:outline-none">
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <div
                                                         className={classNames(
                                                             active
-                                                                ? "bg-black"
+                                                                ? "bg-purple-700 text-white"
                                                                 : "",
-                                                            "block cursor-pointer px-4 py-2 text-sm text-white"
+                                                            "rounded-xl px-4 py-2 text-sm text-white"
                                                         )}
                                                         onClick={() =>
                                                             signOutWallet()
