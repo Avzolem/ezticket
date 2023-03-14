@@ -328,7 +328,7 @@ export default function Home() {
                                     </div>
                                     <br />
 
-                                    <div className="textcontainer text-justify-center bg-white px-6 py-4 ">
+                                    <div className="textcontainer text-justify-center  bg-white px-6 py-4 ">
                                         <p className="mt-4 flex h-6 w-28 rounded-md bg-purple-700 px-2 text-sm text-white">
                                             Active Event
                                         </p>

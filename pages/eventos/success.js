@@ -10,7 +10,7 @@ const ContactPage = () => {
                 childrenClassName="h-screen"
                 className="relative"
             >
-                <div className="h-min-screen bg-hybrida-bgblue  h-full ">
+                <div className="h-min-screen h-full ">
                     <div className="relative mx-auto max-w-xl">
                         <div className="flex h-screen items-center justify-center">
                             <div className="rounded-xl bg-white px-12 text-center">
@@ -27,46 +27,48 @@ const ContactPage = () => {
                                         ti.
                                     </h2>
                                     <br />
-                                    <h2>
-                                        Para preguntas e información adicional:
+                                    <h2 className="font-bold">
+                                        Aditional Information and Questions:
                                     </h2>
                                     <br />
 
                                     <div className="text-center text-sm">
                                         <div className="flex justify-center">
-                                            <p>Escribenos un correo a</p> &nbsp;
+                                            <p>Write an email to</p> &nbsp;
                                             <a
                                                 href="mailto:hybrida@uach.mx"
                                                 target="_blank"
                                             >
-                                                <p class="font-bold text-sky-400/100">
+                                                <p class="font-bold text-emerald-400/100">
                                                     eztickets@proton.me
                                                 </p>
                                             </a>
                                         </div>
                                         <div className="flex justify-center">
-                                            <p>Envía mensaje vía Instagram a</p>{" "}
+                                            <p>Send Message on Instagram to</p>{" "}
                                             &nbsp;
                                             <a
                                                 href="https://www.instagram.com/avsolem"
                                                 target="_blank"
                                             >
-                                                <p class="font-bold text-pink-400/100">
+                                                <p class="font-bold text-sky-400/100">
                                                     @avsolem
                                                 </p>
                                             </a>
                                         </div>
                                         <div className="flex justify-center">
-                                            <p>Envía mensaje vía Discord </p>{" "}
+                                            <p>Send Message on Discord</p>{" "}
                                             &nbsp;
                                             <a
-                                                href="https://discord.gg/cvQyBHF2Dz"
+                                                href="https://discord.gg/AhSERBy467"
                                                 target="_blank"
                                             >
                                                 <p class="font-bold text-purple-600">
-                                                    @etherfuse
+                                                    @HackDogs
                                                 </p>
                                             </a>
+                                            &nbsp;
+                                            <p>in the channel #EzTicket</p>{" "}
                                             &nbsp;
                                         </div>
                                     </div>
@@ -82,7 +84,7 @@ const ContactPage = () => {
                                 <div className="pt-6 pb-20">
                                     <a href="/">
                                         <button className="inline-flex items-center rounded-full border border-transparent bg-black px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">
-                                            Regresar a la página principal
+                                            Return to Home Page
                                         </button>
                                     </a>
                                 </div>

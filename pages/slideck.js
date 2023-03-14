@@ -59,7 +59,7 @@ export default function Slideck() {
                         </h2>
                         <span className="text-2xl font-bold tracking-tight text-white  ">
                             We try to make it as easy as possible for you to get
-                            your EzTicket
+                            your EzTickets
                         </span>
                         <div className="mt-8 flex justify-center">
                             <div class="w-full">
@@ -70,6 +70,9 @@ export default function Slideck() {
                                 />
                             </div>
                         </div>
+
+                        <br />
+                        <br />
 
                         <LiteYouTubeEmbed
                             aspectHeight={9}
