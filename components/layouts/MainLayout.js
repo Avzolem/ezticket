@@ -12,7 +12,7 @@ const Layout = ({
     ...rest
 }) => {
     return (
-        <div class="">
+        <div className="">
             <Head>
                 <link rel="icon" href="/favicon.ico" />
             </Head>

@@ -42,7 +42,7 @@ const Header = () => {
             }
 
             if (provider?.isPhantom) {
-                console.log(provider);
+                console.log("Este es el Provider> ", provider);
                 phantom = provider;
             }
         }
@@ -74,16 +74,25 @@ const Header = () => {
                         //router.push("/auth/signin");
                     } else {
                         console.log("Phantom wallet is not installed");
-                        window.open("https://phantom.app/", "_blank");
+                        toast.error("Please install Phantom Wallet...");
+                        setTimeout(() => {
+                            window.open("https://phantom.app/", "_blank");
+                        }, 2000);
                     }
                 } catch (error) {
                     console.log(error);
                 }
             } else {
-                console.log("Phantom wallet is not installed");
+                toast.error("Please install Phantom Wallet...");
+                setTimeout(() => {
+                    window.open("https://phantom.app/", "_blank");
+                }, 2000);
             }
         } else {
-            window.open("https://phantom.app/", "_blank");
+            toast.error("Please install Phantom Wallet...");
+            setTimeout(() => {
+                window.open("https://phantom.app/", "_blank");
+            }, 2000);
         }
     };
 
@@ -91,7 +100,7 @@ const Header = () => {
         try {
             const provider = getProvider();
             const message =
-                "Para evitar que alguien se haga pasar por ti, necesitamos que firmes este mensaje";
+                "This is a message to sign with your Phantom wallet";
             const encodeMessage = new TextEncoder().encode(message);
             const signedMessage = await provider.request({
                 method: "signMessage",
@@ -110,7 +119,8 @@ const Header = () => {
                     signedMessage.publicKey
                 );
                 console.log(signedMessage);
-                router.push("/");
+                toast.success("Wallet connected ");
+                router.reload(window.location.pathname);
             }
         } catch (error) {
             console.log(error);
@@ -121,6 +131,8 @@ const Header = () => {
         console.log("sign out");
         window.localStorage.removeItem("publicKey");
         window.localStorage.removeItem("signature");
+        setPublicKey(null);
+        solana.disconnect();
         router.reload(window.location.pathname);
     };
 
@@ -240,7 +252,7 @@ const Header = () => {
                                                             signOutWallet()
                                                         }
                                                     >
-                                                        Salir
+                                                        Sign Out
                                                     </div>
                                                 )}
                                             </Menu.Item>
