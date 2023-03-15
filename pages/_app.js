@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 
 import React, { useEffect, useState } from "react";
-
+import { SessionProvider } from "next-auth/react";
 import idl from "../public/idl.json";
 import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
 import {
@@ -61,7 +61,11 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
 
     return (
         <>
-            <Component {...pageProps} />
+            <div>
+                <SessionProvider session={session}>
+                    <Component {...pageProps} />
+                </SessionProvider>
+            </div>
         </>
     );
 }
