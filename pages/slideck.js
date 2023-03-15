@@ -113,6 +113,14 @@ export default function Slideck() {
                                 className=" w-[15rem]  "
                             />
                         </div>
+                        <div className="relative mx-auto flex justify-center overflow-hidden ">
+                            {" "}
+                            <img
+                                src="/images/grizzlython.png"
+                                className=" w-[15rem]  "
+                            />
+                        </div>
+
                         <br />
                         <span className="justify-center text-xl text-white">
                             With all the power of the Solana blockchain to
