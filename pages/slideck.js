@@ -2,46 +2,6 @@ import MainLayout from "@/components/layouts/MainLayout";
 import ParticlesBackground from "../components/common/ParticlesBackground";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
-import { TicketIcon } from "@heroicons/react/solid";
-
-const feats = [
-    {
-        name: "Authenticity:",
-        description:
-            "EzTickets are unique and tied to a specific event, which means they are virtually impossible to falsify. This ensures that event attendees can be sure that their ticket is authentic and valid.",
-        icon: TicketIcon,
-    },
-    {
-        name: "Ease of transfer:",
-        description:
-            "EzTickets are easily transferable between people, meaning that if an attendee is unable to make it to the event, they can safely and easily sell or transfer their ticket.",
-        icon: TicketIcon,
-    },
-    {
-        name: "Access Control:",
-        description:
-            "Event organizers can use EzTickets to control access to the event and ensure that only people with valid tickets can enter. This can help prevent overcapacity and ensure attendee safety.",
-        icon: TicketIcon,
-    },
-    {
-        name: "Improve the attendee experience: ",
-        description:
-            " EzTickets can offer a more interactive and personalized experience for event attendees. For example, they can be used to offer exclusive content or to unlock special offers within the event.",
-        icon: TicketIcon,
-    },
-    {
-        name: "Registration and monitoring:",
-        description:
-            "EzTickets enable ticket ownership registration and tracking, which means event organizers can keep track of who has purchased a ticket and how many tickets have been sold in total. This can be helpful for future event planning and promotion.",
-        icon: TicketIcon,
-    },
-    {
-        name: "EzTickets:",
-        description:
-            "In short, EzTickets offer a secure, easy, and efficient way to manage event tickets and can significantly enhance the experience for both event organizers and attendees.",
-        icon: TicketIcon,
-    },
-];
 
 export default function Slideck() {
     return (
@@ -57,6 +17,7 @@ export default function Slideck() {
                                 EzTicket
                             </span>
                         </h2>
+                        <br />
                         <span className="text-2xl font-bold tracking-tight text-white  ">
                             We try to make it as easy as possible for you to get
                             your EzTickets
@@ -64,7 +25,7 @@ export default function Slideck() {
                         <div className="mt-8 flex justify-center">
                             <div class="w-full">
                                 <img
-                                    src="/images/boletos.png"
+                                    src="/images/boletines.png"
                                     class="w-[40rem] "
                                     alt="boletos"
                                 />
@@ -73,57 +34,121 @@ export default function Slideck() {
 
                         <br />
                         <br />
+                        <span className="text-2xl font-bold tracking-tight text-white  ">
+                            Here is a video that explains how it works
+                        </span>
+
+                        <br />
+                        <br />
 
                         <LiteYouTubeEmbed
                             aspectHeight={9}
                             aspectWidth={16}
-                            id="pPi1e-1nsNI"
+                            id="OKK8O7dqwis"
                             title="EzTicket"
                         />
-                    </div>
-                    <p className="mt-4 text-lg leading-6 text-white">
+
                         <br />
-                        <section className="relative">
-                            <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
-                                <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-8 lg:gap-y-16">
-                                    {feats.map((feat) => (
-                                        <div
-                                            key={feat.name}
-                                            className="relative pl-9"
-                                        >
-                                            <dt className="inline font-semibold text-white">
-                                                <feat.icon
-                                                    className="absolute top-1 left-1 h-5 w-5 text-indigo-500"
-                                                    aria-hidden="true"
-                                                />
-                                                {feat.name}
-                                            </dt>{" "}
-                                            <dd className="inline">
-                                                {feat.description}
-                                            </dd>
-                                        </div>
-                                    ))}
-                                </dl>
-                            </div>
-                            <br />
-                            <br />
-                            <br />
-                            <div className="relative overflow-hidden pt-16">
-                                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                        <br />
+                        <span className="justify-center text-2xl font-bold text-white  ">
+                            Our Dev Team 🌭
+                        </span>
+                        <div className="mt-8 grid grid-cols-2 justify-center">
+                            <div className="mt-8 flex-col justify-center px-5">
+                                <div class="w-full">
                                     <img
-                                        src="/images/herolap.png"
-                                        alt="App screenshot"
+                                        src="/images/ramon.jpeg"
+                                        class="w-[20rem] "
                                     />
+                                    <span className="justify-center text-2xl font-bold text-white  ">
+                                        Ramon Najera
+                                    </span>
                                 </div>
                             </div>
 
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                        </section>
+                            <div className="mt-8 flex-col justify-center px-5">
+                                <div class="w-full">
+                                    <img
+                                        src="/images/andres.png"
+                                        class="w-[20rem] "
+                                    />
+                                    <span className="justify-center text-2xl font-bold text-white  ">
+                                        Andres Aguilar
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div className="mt-8 flex-col justify-center px-5">
+                                <div class="w-full">
+                                    <img
+                                        src="/images/bart.jpeg"
+                                        class="w-[20rem] "
+                                    />
+                                    <span className="justify-center text-2xl font-bold text-white  ">
+                                        Bart Lopez
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="mt-8 flex-col justify-center px-5">
+                                <div class="w-full">
+                                    <img
+                                        src="/images/jona.jpeg"
+                                        class="w-[20rem] "
+                                    />
+                                    <span className="justify-center text-2xl font-bold text-white  ">
+                                        Jonathan Meixueiro
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                         <br />
-                    </p>
+                        <br />
+                        <h2 className="text-base font-semibold leading-7 text-indigo-400">
+                            Powered by
+                        </h2>
+                        <div className="relative mx-auto flex justify-center overflow-hidden ">
+                            {" "}
+                            <img
+                                src="https://solana.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdark-horizontal.e4df684f.svg&w=256&q=75"
+                                className=" w-[15rem]  "
+                            />
+                        </div>
+                        <br />
+                        <span className="justify-center text-xl text-white">
+                            With all the power of the Solana blockchain to
+                            create a user experience matchless.
+                        </span>
+
+                        <br />
+                        <br />
+                        <h2 className="text-base font-semibold leading-7 text-indigo-400">
+                            Developed by HackDogs
+                        </h2>
+                        <br />
+                        <div className="relative mx-auto flex justify-center overflow-hidden ">
+                            {" "}
+                            <img
+                                src="/images/dogo.png"
+                                className=" w-[10rem]  "
+                            />
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <h1 className="text-white-900 text-4xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+                            <span className=" text-white">Get an </span>{" "}
+                            <span className=" bg-gradient-to-r  from-emerald-500 via-indigo-500  to-purple-500 bg-clip-text text-transparent ">
+                                EzTickets{" "}
+                            </span>
+                            <span className=" text-white ">
+                                for the events you{" "}
+                            </span>{" "}
+                            <span className=" text-purple-500">love. </span>{" "}
+                        </h1>
+
+                        <br />
+                    </div>
                 </div>
             </MainLayout>
         </div>
