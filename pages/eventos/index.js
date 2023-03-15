@@ -297,7 +297,7 @@ export default function Home() {
           </span>
         </div>
         {/* Event Cards */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 px-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {" "}
           {tickets.map((ticket) => (
             <div className="content  my-16 flex items-center justify-center">
@@ -305,11 +305,11 @@ export default function Home() {
                 <figure>
                   <img src={ticket.img} alt="Event" width={512} height={512} />
                 </figure>
-                <div className="card-body">
+                <div className="card-body h-full">
                   <span className="card-title text-2xl font-bold">
                     {ticket.name}
                   </span>
-                  <p className=" flex h-6 w-28 rounded-md bg-purple-700 px-2 text-sm text-white">
+                  <p className="flex max-h-6 w-28 rounded-md bg-purple-700 px-2 text-sm text-white">
                     Active Event
                   </p>
                   <p className="text-xs text-sky-500">
