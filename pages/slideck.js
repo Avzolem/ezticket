@@ -2,6 +2,7 @@ import MainLayout from "@/components/layouts/MainLayout";
 import ParticlesBackground from "../components/common/ParticlesBackground";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
+import Link from "next/link";
 
 export default function Slideck() {
     return (
@@ -50,6 +51,46 @@ export default function Slideck() {
 
                         <br />
                         <br />
+
+                        <span className="justify-center text-2xl font-bold text-white  ">
+                            Extra Repositories
+                        </span>
+                        <br />
+                        <br />
+                        <span className="justify-center  text-white  ">
+                            Solana Rust Program ⚙️
+                        </span>
+                        <br />
+                        <Link href="https://github.com/ramonnajera/ezticket">
+                            <span className="justify-center  text-sky-500  ">
+                                https://github.com/ramonnajera/ezticket
+                            </span>
+                        </Link>
+                        <br />
+                        <br />
+                        <span className="justify-center  text-white  ">
+                            Candy Machine 🍬
+                        </span>
+                        <br />
+                        <Link href="https://github.com/Avzolem/candy-machine-eztickets">
+                            <span className="justify-center  text-sky-500  ">
+                                https://github.com/Avzolem/candy-machine-eztickets
+                            </span>
+                        </Link>
+                        <br />
+                        <br />
+                        <span className="justify-center  text-white  ">
+                            Native Mobile App 📲
+                        </span>
+                        <br />
+                        <Link href="https://github.com/jonamx13/EzTickets_App">
+                            <span className="justify-center  text-sky-500  ">
+                                https://github.com/jonamx13/EzTickets_App
+                            </span>
+                        </Link>
+                        <br />
+                        <br />
+
                         <span className="justify-center text-2xl font-bold text-white  ">
                             Our Dev Team 🌭
                         </span>
