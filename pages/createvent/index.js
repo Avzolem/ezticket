@@ -338,7 +338,7 @@ const CreateEvent = () => {
                                         htmlFor="Description"
                                         className="block text-sm font-medium text-purple-500"
                                     >
-                                        Description
+                                        Date and Description
                                     </label>
                                     <div className="mt-1">
                                         <textarea
@@ -443,7 +443,7 @@ const CreateEvent = () => {
                                                 <LoadingCircle color="#FFFFFF" />
                                             </div>
                                         ) : (
-                                            "¡Create Event!"
+                                            "¡Create Event! (please wait success message)"
                                         )}
                                     </button>
                                 </div>

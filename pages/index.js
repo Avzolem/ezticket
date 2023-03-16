@@ -78,7 +78,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="convocatoria absolute relative mt-6 flex h-full w-full justify-center md:mt-0">
+                    <div className=" relative mt-6 flex h-full w-full justify-center md:mt-0">
                         <a name="init"></a>
 
                         <Hero />

@@ -34,7 +34,6 @@ export default function Home() {
     useEffect(() => {
         getTickets();
         const onLoad = async () => {
-            setWalletAddress(null);
             await checkIfWalletIsConnected();
         };
         window.addEventListener("load", onLoad);
@@ -153,7 +152,7 @@ export default function Home() {
                     </span>
                 </div>
                 <div className="flex items-center justify-center">
-                    {walletAddress != null ? (
+                    {walletAddress == null ? (
                         <>
                             {/* Aqui va el getTickets del Ramon, que tiene que ejecutarse en usestate                                 */}
                             <Link href="/createvent">
@@ -336,7 +335,7 @@ export default function Home() {
                                     <p className="text-xs text-sky-500">
                                         Event ID: {ticket.pubkey.toString()}
                                     </p>{" "}
-                                    <p className="text-xs">
+                                    <p className="text-sm font-bold">
                                         {ticket.description}
                                     </p>
                                     <div>
@@ -372,7 +371,8 @@ export default function Home() {
                                                         withdraw(ticket.pubkey)
                                                     }
                                                 >
-                                                    Withdraw Money (Owner Only)
+                                                    Withdraw Money {<br />}{" "}
+                                                    (Owner Only)
                                                 </button>
                                                 <br />
                                             </div>

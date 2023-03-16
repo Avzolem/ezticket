@@ -71,7 +71,7 @@ const Header = () => {
                         const response = await phantom.connect();
                         console.log(response.publicKey.toString());
                         loginWithPhantom();
-                        //router.push("/auth/signin");
+                        router.push("/");
                     } else {
                         console.log("Phantom wallet is not installed");
                         toast.error("Please install Phantom Wallet...");
@@ -120,8 +120,10 @@ const Header = () => {
                 );
                 console.log(signedMessage);
                 toast.success("Wallet connected ");
-                router.reload(window.location.pathname);
+                router.push("/");
+                router.reload(window?.location?.pathname);
             }
+            router.reload(window?.location?.pathname);
         } catch (error) {
             console.log(error);
         }
@@ -135,7 +137,7 @@ const Header = () => {
         setProvider(null);
         setPublicKey(null);
         toast.success("Wallet disconnected");
-        router.reload(window.location.pathname);
+        router.push("/");
     };
 
     return (
