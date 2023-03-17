@@ -10,6 +10,8 @@ import {
     utils,
     BN,
 } from "@project-serum/anchor";
+import { AuthContext } from "@/components/AuthProvider";
+import { useContext } from "react";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -24,6 +26,7 @@ export default function Home() {
     const opts = {
         preflightCommitment: "processed",
     };
+    const { publicKey } = useContext(AuthContext);
 
     const getProvider = () => {
         const connection = new Connection(network, opts.preflightCommitment);
@@ -74,25 +77,35 @@ export default function Home() {
                                 className="px-4"
                                 style={{ maxWidth: "1600px" }}
                             >
-                                {tickets && (
-                                    <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
-                                        {tickets.map((ticket, i) => (
-                                            <div
-                                                key={i}
-                                                className="overflow-hidden rounded-xl border shadow"
-                                            >
-                                                <img
-                                                    style={{ height: "20rem" }}
-                                                    src={ticket.img}
-                                                />
-                                            </div>
-                                        ))}
-                                    </div>
-                                )}
-                                {!tickets && (
+                                {publicKey ? (
+                                    tickets ? (
+                                        <div className="grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2 lg:grid-cols-4">
+                                            {tickets.map((ticket, i) => (
+                                                <div
+                                                    key={i}
+                                                    className="overflow-hidden rounded-xl border shadow"
+                                                >
+                                                    <img
+                                                        style={{
+                                                            height: "20rem",
+                                                        }}
+                                                        src={ticket.img}
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <div className="rounded-xl bg-gray-600/75 p-32">
+                                            <span className="text-center text-6xl  text-white">
+                                                There are no tickets to display
+                                                🎫
+                                            </span>
+                                        </div>
+                                    )
+                                ) : (
                                     <div className="rounded-xl bg-gray-600/75 p-32">
                                         <span className="text-center text-6xl  text-white">
-                                            There are no tickets to display
+                                            Please connect your wallet 👻
                                         </span>
                                     </div>
                                 )}
