@@ -1,10 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import {
-    getProviders,
-    signIn,
-    getCsrfToken,
-    getSession,
-} from "next-auth/react";
+
 import { useRouter } from "next/router";
 const bs58 = require("bs58");
 
