@@ -2,7 +2,7 @@ import MainLayout from "@/components/layouts/MainLayout";
 import Link from "next/link";
 import Image from "next/image";
 import ParticlesBackground from "@/components/common/ParticlesBackground";
-import { useSession, signOut } from "next-auth/react";
+
 import { useState } from "react";
 import { useEffect } from "react";
 import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
@@ -14,6 +14,9 @@ import {
     BN,
 } from "@project-serum/anchor";
 import idl from "../../public/idl.json";
+import { AuthContext } from "@/components/AuthProvider";
+import { useContext } from "react";
+import { publicKey } from "@project-serum/anchor/dist/cjs/utils";
 
 const programID = new PublicKey(idl.metadata.address);
 const network = clusterApiUrl("devnet");
@@ -30,14 +33,10 @@ export default function Home() {
     const [walletAddress, setWalletAddress] = useState(null);
     const [events, setEvents] = useState(null);
     const [tickets, setTickets] = useState([]);
+    const { publicKey } = useContext(AuthContext);
 
     useEffect(() => {
         getTickets();
-        const onLoad = async () => {
-            await checkIfWalletIsConnected();
-        };
-        window.addEventListener("load", onLoad);
-        return () => window.removeEventListener("load", onLoad);
     }, []);
 
     const getProvider = () => {
@@ -48,31 +47,6 @@ export default function Home() {
             opts.preflightCommitment
         );
         return provider;
-    };
-
-    const checkIfWalletIsConnected = async () => {
-        try {
-            const { solana } = window;
-            if (solana) {
-                if (solana.isPhantom) {
-                    console.log("Phantom wallet found!");
-                    const response = await solana.connect({
-                        onlyIfTrusted: true,
-                    });
-                    console.log(
-                        "Connected with public key:",
-                        response.publicKey.toString()
-                    );
-                    setWalletAddress(response.publicKey.toString());
-                }
-            } else {
-                alert("Solana objet not found!");
-
-                setWalletAddress(null);
-            }
-        } catch (error) {
-            console.error(error);
-        }
     };
 
     const getTickets = async () => {
@@ -152,7 +126,7 @@ export default function Home() {
                     </span>
                 </div>
                 <div className="flex items-center justify-center">
-                    {walletAddress == null ? (
+                    {publicKey ? (
                         <>
                             {/* Aqui va el getTickets del Ramon, que tiene que ejecutarse en usestate                                 */}
                             <Link href="/createvent">

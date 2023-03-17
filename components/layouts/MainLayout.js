@@ -17,12 +17,12 @@ const Layout = ({
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Seo subtitle={title} description={description} />
-            <div className="flex min-h-screen w-full flex-col" {...rest}>
+            <main className="flex min-h-screen w-full flex-col" {...rest}>
                 <Header />
                 <Toaster position="bottom-center" reverseOrder={false} />
                 <div className={`my-0 ${childrenClassName}`}>{children}</div>
                 <Footer />
-            </div>
+            </main>
         </div>
     );
 };

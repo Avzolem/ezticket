@@ -16,6 +16,9 @@ import {
     BN,
 } from "@project-serum/anchor";
 import idl from "../../public/idl.json";
+
+import { AuthContext } from "@/components/AuthProvider";
+import { useContext } from "react";
 //"img_url",
 // "eventname",
 // "eventdescription",
@@ -36,6 +39,8 @@ const CreateEvent = () => {
         formState: { errors },
     } = useForm();
 
+    const { publicKey } = useContext(AuthContext);
+
     const getProvider = () => {
         const connection = new Connection(network, opts.preflightCommitment);
         const provider = new AnchorProvider(
@@ -45,38 +50,6 @@ const CreateEvent = () => {
         );
         return provider;
     };
-
-    const checkIfWalletIsConnected = async () => {
-        try {
-            const { solana } = window;
-            if (solana) {
-                if (solana.isPhantom) {
-                    console.log("Phantom wallet found!");
-                    const response = await solana.connect({
-                        onlyIfTrusted: true,
-                    });
-                    console.log(
-                        "Connected with public key:",
-                        response.publicKey.toString()
-                    );
-                    setWalletAddress(response.publicKey.toString());
-                }
-            } else {
-                alert("Solana objet not found!");
-                setWalletAddress(null);
-            }
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
-    useEffect(() => {
-        const onLoad = async () => {
-            await checkIfWalletIsConnected();
-        };
-        window.addEventListener("load", onLoad);
-        return () => window.removeEventListener("load", onLoad);
-    }, []);
 
     // SUBMIT FUNCTION
     const onSubmit = async (data) => {
@@ -433,17 +406,21 @@ const CreateEvent = () => {
                                 </div>
                                 {/* BOTON  */}
                                 <div className="sm:col-span-2">
-                                    <button
-                                        type="submit"
-                                        className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-emerald-500 via-indigo-500 to-purple-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-                                        disabled={submitLoading}
-                                    >
-                                        {submitLoading ? (
-                                            <div>
-                                                <LoadingCircle color="#FFFFFF" />
-                                            </div>
+                                    <button className="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-emerald-500 via-indigo-500 to-purple-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                                        {" "}
+                                        {publicKey ? (
+                                            submitLoading ? (
+                                                <div>
+                                                    <LoadingCircle color="#FFFFFF" />
+                                                </div>
+                                            ) : (
+                                                <span type="submit">
+                                                    "¡Create Event! (please wait
+                                                    success message)"
+                                                </span>
+                                            )
                                         ) : (
-                                            "¡Create Event! (please wait success message)"
+                                            "Conect Wallet First"
                                         )}
                                     </button>
                                 </div>

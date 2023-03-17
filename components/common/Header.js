@@ -3,13 +3,12 @@ import { Fragment, useState } from "react";
 import Link from "next/link";
 import { Popover, Transition, Menu } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { useSession, signOut } from "next-auth/react";
 import classNames from "@/utils/classNames";
-import { useEffect } from "react";
-import { Router, useRouter } from "next/router";
+
 import Image from "next/image";
-import toast, { Toaster } from "react-hot-toast";
-import { connectWallet } from "@heroicons/react/solid";
+
+import { AuthContext } from "@/components/AuthProvider";
+import { useContext } from "react";
 
 //HEADER SETUP
 const logoUrl = "/logo.png";
@@ -26,119 +25,8 @@ const navigation = {
 let phantom;
 
 const Header = () => {
-    const router = useRouter();
-    const [publicKey, setPublicKey] = useState(null);
-    const [provider, setProvider] = useState(null);
-
-    useEffect(() => {
-        if ("phantom" in window) {
-            const provider = window.phantom?.solana;
-            let key = window.localStorage.getItem("publicKey");
-            if (key) {
-                let firstFour = key?.substring(0, 4);
-                let lastFour = key?.substring(key?.length - 4);
-                key = firstFour + "..." + lastFour;
-                setPublicKey(key);
-            }
-
-            if (provider?.isPhantom) {
-                console.log("Este es el Provider> ", provider);
-                phantom = provider;
-            }
-        }
-    }, []);
-
-    const getProvider = () => {
-        if ("phantom" in window) {
-            const provider = window.phantom?.solana;
-
-            if (provider?.isPhantom) {
-                return provider;
-            }
-        }
-    };
-
-    const connectWallet = async () => {
-        if ("phantom" in window) {
-            const provider = window.phantom?.solana;
-            if (provider?.isPhantom) {
-                phantom = provider;
-                try {
-                    const { solana } = window;
-
-                    if (solana.isPhantom) {
-                        console.log("Phantom wallet is installed");
-                        const response = await phantom.connect();
-                        console.log(response.publicKey.toString());
-                        loginWithPhantom();
-                        router.push("/");
-                    } else {
-                        console.log("Phantom wallet is not installed");
-                        toast.error("Please install Phantom Wallet...");
-                        setTimeout(() => {
-                            window.open("https://phantom.app/", "_blank");
-                        }, 2000);
-                    }
-                } catch (error) {
-                    console.log(error);
-                }
-            } else {
-                toast.error("Please install Phantom Wallet...");
-                setTimeout(() => {
-                    window.open("https://phantom.app/", "_blank");
-                }, 2000);
-            }
-        } else {
-            toast.error("Please install Phantom Wallet...");
-            setTimeout(() => {
-                window.open("https://phantom.app/", "_blank");
-            }, 2000);
-        }
-    };
-
-    const loginWithPhantom = async () => {
-        try {
-            const provider = getProvider();
-            const message =
-                "This is a message to sign with your Phantom wallet";
-            const encodeMessage = new TextEncoder().encode(message);
-            const signedMessage = await provider.request({
-                method: "signMessage",
-                params: {
-                    message: encodeMessage,
-                    display: "UTF-8",
-                },
-            });
-            if (signedMessage.signature) {
-                window.localStorage.setItem(
-                    "signature",
-                    signedMessage.signature
-                );
-                window.localStorage.setItem(
-                    "publicKey",
-                    signedMessage.publicKey
-                );
-                console.log(signedMessage);
-                toast.success("Wallet connected ");
-                router.push("/");
-                router.reload(window?.location?.pathname);
-            }
-            router.reload(window?.location?.pathname);
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
-    const signOutWallet = () => {
-        solana.disconnect();
-        console.log("sign out");
-        window.localStorage.removeItem("publicKey");
-        window.localStorage.removeItem("signature");
-        setProvider(null);
-        setPublicKey(null);
-        toast.success("Wallet disconnected");
-        router.push("/");
-    };
+    const { publicKey, truncatePublicKey, signIn, signOut } =
+        useContext(AuthContext);
 
     return (
         <Popover className="relative bg-black">
@@ -194,7 +82,7 @@ const Header = () => {
                                                 alt=""
                                             />
                                             <div className="px-1 py-2 text-white">
-                                                {publicKey}
+                                                {truncatePublicKey}
                                             </div>
                                         </Menu.Button>
                                     </div>
@@ -217,9 +105,9 @@ const Header = () => {
                                                                 : "",
                                                             "rounded-xl px-4 py-2 text-sm text-white"
                                                         )}
-                                                        onClick={() =>
-                                                            signOutWallet()
-                                                        }
+                                                        onClick={() => {
+                                                            signOut();
+                                                        }}
                                                     >
                                                         Sign Out
                                                     </div>
@@ -229,10 +117,10 @@ const Header = () => {
                                     </Transition>
                                 </Menu>
                             ) : (
-                                <button
+                                <div
                                     className="  rounded-md bg-purple-500 px-4 py-2 text-sm font-medium text-white hover:bg-purple-700"
                                     onClick={() => {
-                                        connectWallet();
+                                        signIn();
                                     }}
                                 >
                                     <div className="flex items-center space-x-2">
@@ -250,9 +138,9 @@ const Header = () => {
                                                 d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3"
                                             />
                                         </svg>
-                                        <span>Conect Wallet</span>
+                                        <button>Conect Wallet</button>
                                     </div>
-                                </button>
+                                </div>
                             )}
                         </div>
                     </div>

@@ -10,7 +10,8 @@ import {
 import { useRouter } from "next/router";
 export const AuthContext = createContext();
 import toast from "react-hot-toast";
-const avsolemPublicKey = "9gRip3aj217fmworgrSZDugFXnonDG4PxBmm4s4bu8ni";
+const magiosPublicKey = "E8fEhxvSxRfoVCAWbtab1nsimWcaWcoaAsRp4bp8X2up";
+const SOLANA_NETWORK = process.env.NEXT_PUBLIC_SOLANA_NETWORK;
 
 const AuthContextProvider = (props) => {
     const router = useRouter();
@@ -47,11 +48,10 @@ const AuthContextProvider = (props) => {
 
         const { publicKey } = await phantom.connect();
         setPublicKey(publicKey.toString());
+        toast.success("Wallet connected 👻");
         setTruncatePublicKey(truncateWalletAddress(publicKey.toString()));
 
         await signSignature();
-
-        toast.success("Wallet connected ");
     };
 
     const signOut = () => {
@@ -86,7 +86,7 @@ const AuthContextProvider = (props) => {
             setTruncatePublicKey(
                 truncateWalletAddress(signedMessage.publicKey.toString())
             );
-            toast.success("Wallet Signed 🙌🏼 ");
+            toast.success("Wallet Signed ✒️ ");
         } catch (error) {
             console.error("ERRROR SIGNATURE", error);
             toast.error("Something went wrong signing the message");
@@ -100,13 +100,13 @@ const AuthContextProvider = (props) => {
 
             //connection
             const connection = new Connection(
-                clusterApiUrl("devnet"),
+                clusterApiUrl(SOLANA_NETWORK),
                 "confirmed"
             );
 
             //keys
             const fromPubkey = new PublicKey(publicKey);
-            const toPubkey = new PublicKey(avsolemPublicKey);
+            const toPubkey = new PublicKey(magiosPublicKey);
 
             //getbalance
             const balance = await connection.getBalance(
@@ -175,6 +175,7 @@ const AuthContextProvider = (props) => {
                 signOut,
                 sendTransaction,
                 signSignature,
+                LAMPORTS_PER_SOL,
             }}
         >
             {props.children}
