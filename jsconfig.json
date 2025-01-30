@@ -26,9 +26,9 @@
     "incremental": true
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    
+    "**/*.js",
+    "**/*.jsx",
     "components/common/Countdown.js",
     "components/common/Countdown.js"
   ],
